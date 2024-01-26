@@ -1,4 +1,3 @@
-// archivo.js
 
 document.addEventListener("DOMContentLoaded", function () {
     // Obtener elementos del DOM
