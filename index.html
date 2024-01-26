@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EncriptMenssage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row mt-5">
+            
+                <div class="col">
+                    <label for="txtMensajeEncriptar">Texto a encriptar: </label>
+                    <textarea class="form-control mt-2 mb-2" type="text" id="txtMensajeEncriptar" required placeholder="Ingrese el mensaje que quiere encriptar "></textarea>
+                    <label for="txtClaveEncriptar">Clave para encriptar: </label>
+                    <div class="input-group mt-2">
+                        <input type="text" class="form-control" id="txtClaveEncriptar" required placeholder="Clave">
+                        <div class="input-group-append">
+                            <button class="btn btn-secondary" type="button" id="btnGenerarClave">Generar Clave</button>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-success mt-3 mb-5" id="btnEncriptar">Encriptar</button>
+                    <br/>
+                    <label for="txtEncriptado" >Texto Encriptado: </label>
+                    <textarea type="text" class="form-control mt-2 mb-2" id="txtEncriptado" readonly></textarea>
+                </div>
+                <div class="col">
+                    <label for="txtMensajeDesencriptar" >Texto a desencriptar: </label>
+                    <textarea class="form-control mt-2 mb-2" required id="txtMensajeDesencriptar" placeholder="Ingrese el mensaje que quiere desencriptar "></textarea>
+                    <label for="txtClaveDesencriptar">Clave para desencriptar: </label>
+                    <input type="text" class="form-control mt-2" required id="txtClaveDesencriptar" placeholder="Clave">
+                    <button type="button" class="btn btn-warning mt-3 mb-5" id="btnDesencriptar">Desencriptar</button>
+                    <br/>
+                    <label for="txtDesencriptado" >Texto Desencriptado: </label>
+                    <textarea type="text" class="form-control mt-2 mb-2" id="txtDesencriptado" readonly></textarea>
+                </div>
+
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
